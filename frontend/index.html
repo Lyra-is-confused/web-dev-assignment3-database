@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	<script type="module" src="./code.js"></script>
+
+	<style>
+		.filter{
+			margin-left: 2rem;
+			margin-right: 2rem;
+			margin-top: 1rem;
+		}
+
+		.textBox{
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+			border: 0 solid;
+		}
+	</style>
+</head>
+
+<body class="bg-gray-100 m-20 text-center">
+
+    <div id="SearchDiV" class="bg-white p-10 rounded-lg shadow-lg flex flex-col space-y-5">
+		<label for="unicornNameInput">
+	Unicorn Name:
+	<input type="text" id="unicornNameInput" placeholder="Unicorn Name" class="mx-1 my-1 px-3 py-3 rounded-md border-1 border-gray-400">
+		</label>
+
+		<label for="unicornLovesInput">
+	Unicorn Loves:
+	<input type="text" id="unicornLovesInput" placeholder="Unicorn Loves" class="mx-1 my-1 px-3 py-3 rounded-md border-1 border-gray-400">
+		</label>
+
+		<label for="unicornWeightInput">
+	Unicorn Weight (Greater Than):
+	<input type="number" id="unicornWeightInput" placeholder="Unicorn Weight" class="mx-1 my-1 px-3 py-3 rounded-md border-1 border-gray-400">
+		</label>
+
+		<label for="unicornGenderInput">
+	Gender:
+        <select id="unicornGenderInput" class="bg-blue-500 text-white rounded p-1">
+		<option value="m">Male</option>
+		<option value="f">Female</option>
+	</select>
+		</label>
+
+		<label for="unicornVampiresInput">
+	Unicorn Vampires (Greater than):
+	<input type="text" id="unicornVampiresInput" placeholder="Unicorn Vampires" class="mx-1 my-1 px-3 py-3 rounded-md border-1 border-gray-400">
+		</label>
+
+		<label for="unicornVaccinatedInput">
+	Unicorn Vaccinated:
+	<select id="unicornVaccinatedInput" class="bg-blue-500 text-white rounded p-1">
+		<option value="false">False</option>
+		<option value="true">True</option>
+	</select>
+		</label>
+
+		<label for="unicornVampiresExistsInput">
+	Unicorn Vampires (Exists):
+	<select id="unicornVampiresExistsInput" class="bg-blue-500 text-white rounded p-1">
+		<option value="true">True</option>
+		<option value="false">False</option>
+	</select>
+		</label>
+
+		<button id="QueryUnicornsButton">
+	Search
+		</button>
+	</div>
+
+	<div class="bg-white p-10 rounded-lg shadow-lg flex flex-col space-y-5 my-4">
+		<p class="pt-2">Display:</p>
+		<div class="flex flex-row justify-center" id="propertiesFilters">
+			
+			<div class="filter">
+				<input type="checkbox" id="loves" name="loves" value="loves">
+				<label for="loves">Loves</label>
+			</div>
+
+			<div class="filter">
+				<input type="checkbox" id="weight" name="weight" value="weight">
+				<label for="weight">Weight</label>
+			</div>
+
+			<div class="filter">
+				<input type="checkbox" id="gender" name="gender" value="gender">
+				<label for="gender">Gender </label>
+			</div>
+
+			<div class="filter">
+				<input type="checkbox" id="vampires" name="vampires" value="vampires">
+				<label for="vampires">Vampires</label>
+			</div>
+
+			<div class="filter">
+				<input type="checkbox" id="vaccinated" name="vaccinated" value="vaccinated">
+				<label for="vaccinated">Vaccinated</label>
+			</div>
+
+			<div class="filter">
+				<input type="checkbox" id="vampiresExists" name="vampiresExists" value="vampiresExists">
+				<label for="vampiresExists">Vampires Exists</label>
+			</div>
+		</div>
+	</div>
+
+	<div id="results" class="bg-white p-10 rounded-lg shadow-lg flex flex-col space-y-5"></div>
+</body>
+</html>
