@@ -13,7 +13,7 @@ const resultDiv = document.getElementById('results')
 async function QueryUnicorns() {
     resultDiv.innerHTML = ``
     try{
-    const result = await fetch(`https://web-dev-assignment3-database.onrender.com/unicorns?name=${nameInput.value}&loves=${lovesInput.value}&gtweight=${weightInput.value}&gender=${genderInput.value}&hasvampires=${vampiresExistInput.value}&gtvampires=${vampiresInput.value}&vaccinated=${vaccinatedInput.value}`);
+    const result = await fetch(`http://localhost:3000/unicorns?name=${nameInput.value}&loves=${lovesInput.value}&gtweight=${weightInput.value}&gender=${genderInput.value}&hasvampires=${vampiresExistInput.value}&gtvampires=${vampiresInput.value}&vaccinated=${vaccinatedInput.value}`);
     const resultJSON = await result.json();
     //console.log(resultJSON);
     populateUnicorns(resultJSON)
